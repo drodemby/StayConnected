@@ -1,0 +1,27 @@
+{
+  "-NPKksx9TPfkzxnOZG40": {
+    "ministry_name": "Kids Ministry",
+    "description": "vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae",
+    "firebaseKey": "-NPKksx9TPfkzxnOZG40"
+  },
+  "-NPKksxBgagp755Yx5vU": {
+    "ministry_name": "Men's Ministry",
+    "description": "est risus auctor sed tristique in tempus sit amet sem",
+    "firebaseKey": "-NPKksxBgagp755Yx5vU"
+  },
+  "-NPKksxDwRwulfZaX755": {
+    "ministry_name": "Women's Ministry",
+    "description": "nibh in quis justo maecenas rhoncus aliquam lacus morbi quis",
+    "firebaseKey":  "-NPKksxDwRwulfZaX755"
+  },
+  "-NPKksxGse_CO4CsF3jp": {
+    "ministry_name": "Music Minsitry",
+    "description": "ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi",
+    "firebaseKey":"-NPKksxGse_CO4CsF3jp"
+  },
+  "-NPKksxHL75fhtybtfMm": {
+    "ministry_name": "Usher Ministry",
+    "description": "et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis",
+    "firebaseKey":"-NPKksxHL75fhtybtfMm"
+  }
+}
