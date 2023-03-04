@@ -2,8 +2,7 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-const getMembers = () => new Promise ((resolve, reject) => {
-
+const getMembers = () => new Promise((resolve, reject) => {
   fetch(`${dbUrl}/member.json`, {
     method: 'GET',
     headers: {
@@ -54,17 +53,41 @@ const deleteMember = (firebaseKey) => new Promise((resolve, reject) => {
       'Content-Type': 'application/json',
     },
   })
-  .then((response) => response.json())
-  .then((data) => resolve(data))
-  .catch(reject);
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
 });
 
+const getSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/member/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }, // you technically do not need the options object for GET requests, but using it here for consistency
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data)) // will resolve a single object
+    .catch(reject);
+});
 
+const deleteSingleMember = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/member/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
 export {
 
   getMembers,
   newMember,
   deleteMember,
   updateMember,
-  
+  getSingleMember,
+  deleteSingleMember,
+
 };

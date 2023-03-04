@@ -1,4 +1,4 @@
-import { memo } from 'react';
+// import { memo } from 'react';
 import { deleteSingleMinistry, getMembersByMinistry, getSingleMinistry } from './ministryData';
 import { deleteSingleMember, getSingleMember } from './memberData';
 
@@ -17,7 +17,7 @@ const viewMemberDetails = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 const deleteMinistryMembers = (ministryId) => new Promise((resolve, reject) => {
-  getPinsByBoard(ministryId).then((memberArray) => {
+  getMembersByMinistry(ministryId).then((memberArray) => {
     // console.warn(meberArray, 'Board Pins');
     const deleteMemberPromises = memberArray.map((member) => deleteSingleMember(member.firebaseKey));
 
