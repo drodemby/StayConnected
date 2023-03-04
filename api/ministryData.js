@@ -2,8 +2,7 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-const getMinistries = () => new Promise ((resolve, reject) => {
-
+const getMinistries = () => new Promise((resolve, reject) => {
   fetch(`${dbUrl}/ministry.json`, {
     method: 'GET',
     headers: {
@@ -19,7 +18,7 @@ const getMinistries = () => new Promise ((resolve, reject) => {
       }
     })
     .catch(reject);
-})
+});
 
 const newMinsitry = (payload) => new Promise((resolve, reject) => {
   fetch(`${dbUrl}/ministry.json`, {
@@ -83,6 +82,18 @@ const getSingleMinistry = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteSingleMinistry = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/ministry/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   newMinsitry,
   updateMinistry,
@@ -90,4 +101,5 @@ export {
   getMinistries,
   getSingleMinistry,
   getMembersByMinistry,
+  deleteSingleMinistry,
 };
