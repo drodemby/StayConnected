@@ -2,8 +2,8 @@ import { clientCredentials } from '../utils/client';
 
 const dbUrl = clientCredentials.databaseURL;
 
-const getSuggestions = () => new Promise((resolve, reject) => {
-  fetch(`${dbUrl}/suggestions.json`, {
+const getSuggestions = (uid) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/suggestions.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -58,9 +58,21 @@ const deleteSuggestions = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleSuggestion = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbUrl}/suggestions/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    }, // you technically do not need the options object for GET requests, but using it here for consistency
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data)) // will resolve a single object
+    .catch(reject);
+});
 export {
 
   getSuggestions,
+  getSingleSuggestion,
   newSuggestions,
   deleteSuggestions,
   updateSuggestions,
