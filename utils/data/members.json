@@ -5,6 +5,8 @@
     "last_name": "Norkutt",
     "gender": "Male",
     "age": 40,
+    "email": "ringod@mail.com",
+    "number": "6782341111",
     "ministry_id": "-NPKksxBgagp755Yx5vU",
     "uid": "null"
   },
@@ -14,6 +16,8 @@
     "last_name": "Bohlens",
     "gender": "Male",
     "age": 47,
+    "number": "67823411134",
+    "email": "paddy@mail.com",
     "ministry_id": "-NPKksxBgagp755Yx5vU",
     "uid": "null"
   },
@@ -23,6 +27,8 @@
     "last_name": "Massey",
     "gender": "Female",
     "age": 71,
+    "number": "6782341154",
+    "email": "kristy@mail.com",
     "ministry_id": "-NPKksx9TPfkzxnOZG40",
     "uid": "null"
   },
@@ -32,6 +38,8 @@
     "last_name": "Stapele",
     "gender": "Female",
     "age": 36,
+    "number": "6782341451",
+    "email": "tedras@mail.com",
     "ministry_id":  "-NPKksxDwRwulfZaX755",
     "uid": "null"
   },
@@ -41,6 +49,8 @@
     "last_name": "Hutcheon",
     "gender": "Female",
     "age": 65,
+    "number": "6782344411",
+    "email": "Dorolisa@mail.com",
     "ministry_id": "-NPKksx9TPfkzxnOZG40",
     "uid": "null"
   },
@@ -50,6 +60,8 @@
     "last_name": "Scard",
     "gender": "Female",
     "age": 33,
+    "number": "6782398111",
+    "email": "caressa@mail.com",
     "ministry_id":  "-NPKksxDwRwulfZaX755",
     "uid": "null"
   },
@@ -59,6 +71,8 @@
     "last_name": "Dethloff",
     "gender": "Male",
     "age": 63,
+    "number": "6782347711",
+    "email": "thornie@mail.com",
     "ministry_id": "-NPKksxGse_CO4CsF3jp",
     "uid": "null"
   },
@@ -68,6 +82,8 @@
     "last_name": "Spalton",
     "gender": "Female",
     "age": 62,
+    "number": "6782342311",
+    "email": "jinnys@mail.com",
     "ministry_id": "-NPKksxGse_CO4CsF3jp",
     "uid": "null"
   },
@@ -77,6 +93,8 @@
     "last_name": "Fitzroy",
     "gender": "Female",
     "age": 73,
+    "number": "6782366111",
+    "email": "Prudence@mail.com",
     "ministry_id": "-NPKksxHL75fhtybtfMm",
     "uid": "null"
   },
@@ -86,6 +104,8 @@
     "last_name": "Stenet",
     "gender": "Male",
     "age": 41,
+    "number": "6782387111",
+    "email": "xevers@mail.com",
     "ministry_id": "-NPKksxHL75fhtybtfMm",
     "uid": "null"
   }
