@@ -7,8 +7,10 @@ import { newSuggestions, updateSuggestions } from '../../api/suggestionData';
 import { useAuth } from '../../utils/context/authContext';
 
 const initialStateBF = {
-  name: '',
+  first_name: '',
+  last_name: '',
   description: '',
+  ministry: '',
 };
 
 export default function SuggestionsForm({ obj }) {
@@ -32,13 +34,13 @@ export default function SuggestionsForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updateSuggestions(formInput)
-        .then(() => router.push('/profile'));
+        .then(() => router.push('/suggestion'));
     } else {
       const payload = { ...formInput, uid: user.uid };
       newSuggestions(payload).then(({ name }) => {
         const patchPayloadFBK = { firebaseKey: name };
         updateSuggestions(patchPayloadFBK).then(() => {
-          router.push('/profile');
+          router.push('/suggestion');
         });
       });
     }
@@ -46,10 +48,10 @@ export default function SuggestionsForm({ obj }) {
 
   return (
     <div className="board-form-container">
-      <Head><title>{obj.firebaseKey ? `Update ${obj.name} Board` : 'Create Board'}</title></Head>
+      <Head><title>{obj.firebaseKey ? `Update ${obj.first_name}'s Suggestion` : 'Create Suggestion'}</title></Head>
 
       <Form onSubmit={handleSubmit} className="text-color-drkblu">
-        <h2 className="mt-5 text-center">{obj.firebaseKey ? `Update ${obj.name}` : 'Suggestions Box'}</h2>
+        <h2 className="mt-5 text-center">{obj.firebaseKey ? `Update ${obj.first_name}` : 'Suggestions Box'}</h2>
         <div className="mt-5" />
         <div className=""> First Name</div>
         <FloatingLabel
@@ -60,7 +62,7 @@ export default function SuggestionsForm({ obj }) {
           <Form.Control
             type="text"
             placeholder="Enter Your First Name"
-            name="name"
+            name="first_name"
             value={formInput.first_name}
             onChange={handleChange}
             required
@@ -75,7 +77,7 @@ export default function SuggestionsForm({ obj }) {
           <Form.Control
             type="text"
             placeholder="Enter Your Last Name"
-            name="name"
+            name="last_name"
             value={formInput.last_name}
             onChange={handleChange}
             required
@@ -106,7 +108,7 @@ export default function SuggestionsForm({ obj }) {
           <Form.Control
             type="text"
             placeholder="ministry"
-            name="description"
+            name="ministry"
             value={formInput.ministry}
             onChange={handleChange}
             required
@@ -120,7 +122,8 @@ export default function SuggestionsForm({ obj }) {
 
 SuggestionsForm.propTypes = {
   obj: PropTypes.shape({
-    name: PropTypes.string,
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
     firebaseKey: PropTypes.string,
     description: PropTypes.string,
     ministry: PropTypes.string,

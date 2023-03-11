@@ -1,5 +1,5 @@
-import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
+import cotwgi from '../images/cotwgi.png';
 
 function Home() {
   const { user } = useAuth();
@@ -8,6 +8,7 @@ function Home() {
     <div
       className="text-center d-flex flex-column justify-content-center align-content-center"
       style={{
+        backgroundImage: cotwgi,
         height: '90vh',
         padding: '30px',
         maxWidth: '400px',
@@ -15,10 +16,7 @@ function Home() {
       }}
     >
       <h1>Hello {user.displayName}! </h1>
-      <p>Click the button below to logout!</p>
-      <button className="btn btn-danger btn-lg copy-btn" type="button" onClick={signOut}>
-        Sign Out
-      </button>
+      <p>Welcome to MyChurchApp</p>
     </div>
   );
 }

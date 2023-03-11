@@ -6,12 +6,12 @@ import { useAuth } from '../utils/context/authContext';
 import { getSuggestions } from '../api/suggestionData';
 
 export default function SuggestionPage() {
-  const [suggestion, setSuggestion] = useState([]);
+  const [suggestions, setSuggestions] = useState([]);
 
   const { user } = useAuth();
 
   const getAllSuggestions = () => {
-    getSuggestions(user.uid).then(setSuggestion);
+    getSuggestions(user.uid).then(setSuggestions);
   };
 
   useEffect(() => {
@@ -25,8 +25,8 @@ export default function SuggestionPage() {
       </Link>
 
       <div className="d-flex flex-wrap">
-        {suggestion.map((suggestions) => (
-          <SugCard key={suggestions.firebaseKey} sugObj={suggestion} onUpdate={getAllSuggestions} />
+        {suggestions.map((suggestion) => (
+          <SugCard key={suggestion.firebaseKey} sugObj={suggestion} onUpdate={getAllSuggestions} />
         ))}
       </div>
 

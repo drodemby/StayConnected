@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { deleteSuggestions } from '../api/suggestionData';
 import { useAuth } from '../utils/context/authContext';
 
-export default function SugCard({ sugObj, onUpdate }) {
+function SugCard({ sugObj, onUpdate }) {
   const { user } = useAuth();
   const deleteSuggestion = () => {
     if (window.confirm(`Delete ${sugObj.first_name}?`)) {
@@ -43,5 +43,7 @@ SugCard.propTypes = {
     ministry: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
-  onUpdate: PropTypes.func.isRequired,
+  onUpdate: PropTypes.isRequired,
 };
+
+export default SugCard;
