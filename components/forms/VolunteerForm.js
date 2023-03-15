@@ -44,8 +44,11 @@ function VolunteerForm({ obj }) {
         .then(() => router.push('/profile'));
     } else {
       const payload = { ...formInput, uid: user.uid };
-      newMember(payload).then(() => {
-        router.push('/');
+      newMember(payload).then(({ name }) => {
+        const patchPayloadFBK = { firebaseKey: name };
+        updateMember(patchPayloadFBK).then(() => {
+          router.push(`/profile/${name}`);
+        });
       });
     }
   };
