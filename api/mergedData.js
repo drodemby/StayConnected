@@ -1,6 +1,6 @@
 // import { memo } from 'react';
 import { deleteSingleMinistry, getMembersByMinistry, getSingleMinistry } from './ministryData';
-import { deleteSingleMember, getSingleMember } from './memberData';
+import { deleteSingleMember, getSingleMember } from './volunteerData';
 
 const viewMinistryDetails = (firebaseKey) => new Promise((resolve, reject) => {
   getSingleMinistry(firebaseKey).then((ministry) => {

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Link from 'next/link';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, NavDropdown } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
@@ -33,17 +33,25 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link passHref href="/">
-                <a className="nav-link">
-                  Connection
-                </a>
-              </Link>
-            </li>
+            <NavDropdown title="Connection">
+              <NavDropdown.Item href="/ministries">
+                Ministries
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/volunteer/new">
+                Volunteer Form
+              </NavDropdown.Item>
+            </NavDropdown>
             <li className="nav-item">
               <Link passHref href="/suggestion">
                 <a className="nav-link">
                   Suggestions
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link passHref href="/profile">
+                <a className="nav-link">
+                  My Stuff
                 </a>
               </Link>
             </li>

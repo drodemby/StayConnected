@@ -21,7 +21,7 @@ export default function ViewMinistry() {
       <div className="BD-detail-cont-bg" style={{ backgroundImage: `url(${ministryDetails.image})` }}>
         <div className="BD-detail-cont">
           {/* <div className="BD-photo-cont"><img className="BD-photo" src={boardDetails.image} alt={boardDetails.name} /></div> */}
-          <div className="BD-name-cont"><h2 className="BD-name">{ministryDetails.name}</h2></div>
+          <div className="BD-name-cont"><h2 className="BD-name">{ministryDetails.ministry_name}</h2></div>
           <div className="BD-desc-cont"><h5 className="BD-description">{ministryDetails.description}</h5></div>
           <div className="BD-edit-cont">
             <Link href={`edit/${ministryDetails.firebaseKey}`} passHref>
