@@ -48,13 +48,14 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link passHref href="/profile">
-                <a className="nav-link">
-                  My Stuff
-                </a>
-              </Link>
-            </li>
+            <NavDropdown title="My Forms">
+              {/* <NavDropdown.Item href="/givingStatement">
+                Giving Statement
+              </NavDropdown.Item> */}
+              <NavDropdown.Item href="/volunteerform">
+                Volunteer Forms
+              </NavDropdown.Item>
+            </NavDropdown>
             <button type="button" className="btn btn-danger" onClick={signOut}>
               Sign Out
             </button>

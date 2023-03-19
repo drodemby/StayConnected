@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { viewMinistryDetails } from '../../api/mergedData';
 import { useAuth } from '../../utils/context/authContext';
-// import ViewYourPins from '../../components/ViewYourPins';
 
 export default function ViewMinistry() {
   const [ministryDetails, setMinistryDetails] = useState({});
