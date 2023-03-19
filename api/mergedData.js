@@ -11,7 +11,7 @@ const viewMinistryDetails = (firebaseKey) => new Promise((resolve, reject) => {
 
 const viewMemberDetails = (firebaseKey) => new Promise((resolve, reject) => {
   getSingleMember(firebaseKey).then((member) => {
-    getSingleMinistry(member.ministry_id)
+    getSingleMinistry(member.firebaseKey)
       .then((memberData) => resolve({ ...member, memberData }));
   }).catch(reject);
 });

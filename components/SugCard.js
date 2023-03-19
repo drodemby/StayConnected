@@ -18,7 +18,7 @@ function SugCard({ sugObj, onUpdate }) {
     <div>
       <Card>
         <Card.Body>{sugObj.description}</Card.Body>
-        <Card.Body>{sugObj.ministry}</Card.Body>
+        <Card.Body>{sugObj.ministry_id}</Card.Body>
         <Link href={`/suggestions/edit/${sugObj.firebaseKey}`} passHref>
           {sugObj.uid === user.uid ? (<Button variant="outline-dark" className="m-2">EDIT</Button>) : '' }
         </Link>
@@ -40,7 +40,7 @@ SugCard.propTypes = {
     description: PropTypes.string,
     first_name: PropTypes.string,
     firebaseKey: PropTypes.string,
-    ministry: PropTypes.string,
+    ministry_id: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.isRequired,

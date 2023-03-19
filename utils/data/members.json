@@ -7,7 +7,7 @@
     "email": "ringod@mail.com",
     "number": "6782341111",
     "ministry_id": "-NPKksxBgagp755Yx5vU",
-    "uid": "null"
+    "uid": "J8jjNCYbvXPg8RLNk0ukkO02qz33"
   },
   "-NPKf2g-lRDGj_pPxApD": {
     "firebaseKey":   "-NPKf2g-lRDGj_pPxApD",
@@ -17,7 +17,7 @@
     "number": "67823411134",
     "email": "paddy@mail.com",
     "ministry_id": "-NPKksxBgagp755Yx5vU",
-    "uid": "null"
+    "uid": "J8jjNCYbvXPg8RLNk0ukkO02qz33"
   },
   "-NPKf2g4-wrwaB_tdyoS": {
     "firebaseKey":  "-NPKf2g4-wrwaB_tdyoS",
@@ -27,76 +27,6 @@
     "number": "6782341154",
     "email": "kristy@mail.com",
     "ministry_id": "-NPKksx9TPfkzxnOZG40",
-    "uid": "null"
-  },
-  "-NPKf2g7qFkEtDiuK0XA": {
-    "firebaseKey": "-NPKf2g7qFkEtDiuK0XA",
-    "first_name": "Tedra",
-    "last_name": "Stapele",
-    "age": 36,
-    "number": "6782341451",
-    "email": "tedras@mail.com",
-    "ministry_id":  "-NPKksxDwRwulfZaX755",
-    "uid": "null"
-  },
-  "-NPKf2gByMfiGNjsLT4f": {
-    "firebaseKey":   "-NPKf2gByMfiGNjsLT4f",
-    "first_name": "Dorolisa",
-    "last_name": "Hutcheon",
-    "age": 65,
-    "number": "6782344411",
-    "email": "Dorolisa@mail.com",
-    "ministry_id": "-NPKksx9TPfkzxnOZG40",
-    "uid": "null"
-  },
-  "-NPKf2gFZutp14SzPbpX": {
-    "firebaseKey":  "-NPKf2gFZutp14SzPbpX",
-    "first_name": "Caressa",
-    "last_name": "Scard",
-    "age": 33,
-    "number": "6782398111",
-    "email": "caressa@mail.com",
-    "ministry_id":  "-NPKksxDwRwulfZaX755",
-    "uid": "null"
-  },
-  "-NPKf2gH1zyjj2O-bWkp": {
-    "firebaseKey":  "-NPKf2gH1zyjj2O-bWkp",
-    "first_name": "Thornie",
-    "last_name": "Dethloff",
-    "age": 63,
-    "number": "6782347711",
-    "email": "thornie@mail.com",
-    "ministry_id": "-NPKksxGse_CO4CsF3jp",
-    "uid": "null"
-  },
-  "-NPKf2gKrpigFVScKcUX": {
-    "firebaseKey":   "-NPKf2gKrpigFVScKcUX",
-    "first_name": "Jinny",
-    "last_name": "Spalton",
-    "age": 62,
-    "number": "6782342311",
-    "email": "jinnys@mail.com",
-    "ministry_id": "-NPKksxGse_CO4CsF3jp",
-    "uid": "null"
-  },
-  "-NPKf2gL6oqE0O6_xrYv": {
-    "firebaseKey":"-NPKf2gL6oqE0O6_xrYv",
-    "first_name": "Prudence",
-    "last_name": "Fitzroy",
-    "age": 73,
-    "number": "6782366111",
-    "email": "Prudence@mail.com",
-    "ministry_id": "-NPKksxHL75fhtybtfMm",
-    "uid": "null"
-  },
-  "-NPKf2gNnkv9ni6rWLMg": {
-    "firebaseKey": "-NPKf2gNnkv9ni6rWLMg",
-    "first_name": "Xever",
-    "last_name": "Stenet",
-    "age": 41,
-    "number": "6782387111",
-    "email": "xevers@mail.com",
-    "ministry_id": "-NPKksxHL75fhtybtfMm",
-    "uid": "null"
-  }
+    "uid": "J8jjNCYbvXPg8RLNk0ukkO02qz33"
+    }
 }

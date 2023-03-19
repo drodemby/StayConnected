@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
+import Head from 'next/head';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
@@ -41,55 +42,61 @@ function VolunteerForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updateMember(formInput)
-        .then(() => router.push('/profile'));
+        .then(() => router.push('/volunteerform'));
     } else {
       const payload = { ...formInput, uid: user.uid };
-      newMember(payload).then(() => {
-        router.push('/');
+      newMember(payload).then(({ name }) => {
+        const patchPayloadFBK = { firebaseKey: name };
+        updateMember(patchPayloadFBK).then(() => {
+          router.push('/volunteerform');
+        });
       });
     }
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'New'} Volunteer Form</h2>
+    <div>
+      <Head><title>{obj.firebaseKey ? `Update ${obj.first_name}'s Form` : 'Create Volunteer Form'}</title></Head>
 
-      {/* FIRST NAME  */}
-      <FloatingLabel controlId="floatingInput1" label="First Name" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="Enter First Name"
-          name="first_name"
-          value={formInput.first_name}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+      <Form onSubmit={handleSubmit}>
+        <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'New'} Volunteer Form</h2>
 
-      {/* LAST NAME  */}
-      <FloatingLabel controlId="floatingInput3" label="Last Name" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="Enter Last Name"
-          name="last_name"
-          value={formInput.last_name}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+        {/* FIRST NAME  */}
+        <FloatingLabel controlId="floatingInput1" label="First Name" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Enter First Name"
+            name="first_name"
+            value={formInput.first_name}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
 
-      {/* Ministry  */}
-      <FloatingLabel controlId="floatingSelect" label="Ministry">
-        <Form.Select
-          aria-label="Ministry"
-          name="ministry_id"
-          onChange={handleChange}
-          className="mb-3"
-          value={formInput.ministry_id}
-          required
-        >
-          <option value="">Select a ministry</option>
-          {
+        {/* LAST NAME  */}
+        <FloatingLabel controlId="floatingInput3" label="Last Name" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Enter Last Name"
+            name="last_name"
+            value={formInput.last_name}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
+
+        {/* Ministry  */}
+        <FloatingLabel controlId="floatingSelect" label="Ministry">
+          <Form.Select
+            aria-label="Ministry"
+            name="ministry_id"
+            onChange={handleChange}
+            className="mb-3"
+            value={formInput.ministry_id}
+            required
+          >
+            <option value="">Select a ministry</option>
+            {
             ministries.map((ministry) => (
               <option
                 key={ministry.firebaseKey}
@@ -99,48 +106,49 @@ function VolunteerForm({ obj }) {
               </option>
             ))
           }
-        </Form.Select>
-      </FloatingLabel>
+          </Form.Select>
+        </FloatingLabel>
 
-      {/* AGE */}
-      <FloatingLabel controlId="floatingInput3" label="Age" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="Age"
-          name="age"
-          value={formInput.age}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+        {/* AGE */}
+        <FloatingLabel controlId="floatingInput3" label="Age" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Age"
+            name="age"
+            value={formInput.age}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
 
-      {/* Email */}
-      <FloatingLabel controlId="floatingInput3" label="Email" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="Email"
-          name="email"
-          value={formInput.email}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+        {/* Email */}
+        <FloatingLabel controlId="floatingInput3" label="Email" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="Email"
+            name="email"
+            value={formInput.email}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
 
-      {/* NUMBER */}
-      <FloatingLabel controlId="floatingInput3" label="Number" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="number"
-          name="number"
-          value={formInput.number}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
+        {/* NUMBER */}
+        <FloatingLabel controlId="floatingInput3" label="Number" className="mb-3">
+          <Form.Control
+            type="text"
+            placeholder="number"
+            name="number"
+            value={formInput.number}
+            onChange={handleChange}
+            required
+          />
+        </FloatingLabel>
 
-      {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Submit'} Form</Button>
-    </Form>
+        {/* SUBMIT BUTTON  */}
+        <Button type="submit">{obj.firebaseKey ? 'Update' : 'Submit'} Form</Button>
+      </Form>
+    </div>
   );
 }
 

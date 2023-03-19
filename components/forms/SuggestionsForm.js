@@ -4,6 +4,7 @@ import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { newSuggestions, updateSuggestions } from '../../api/suggestionData';
+import { getMinistries } from '../../api/ministryData';
 import { useAuth } from '../../utils/context/authContext';
 
 const initialStateBF = {
@@ -15,10 +16,12 @@ const initialStateBF = {
 
 export default function SuggestionsForm({ obj }) {
   const [formInput, setFormInput] = useState(initialStateBF);
+  const [ministries, setMinistries] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getMinistries().then(setMinistries);
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -100,19 +103,27 @@ export default function SuggestionsForm({ obj }) {
           />
         </FloatingLabel>
         <div className="">Ministry</div>
-        <FloatingLabel
-          controlId="floatingInput2"
-          label="Enter The Ministry This Suggestion Refers To"
-          className="mb-3"
-        >
-          <Form.Control
-            type="text"
-            placeholder="ministry"
-            name="ministry"
-            value={formInput.ministry}
+        <FloatingLabel controlId="floatingSelect" label="Ministry">
+          <Form.Select
+            aria-label="Ministry"
+            name="ministry_id"
             onChange={handleChange}
+            className="mb-3"
+            value={formInput.ministry_id}
             required
-          />
+          >
+            <option value="">Select a ministry</option>
+            {
+            ministries.map((ministry) => (
+              <option
+                key={ministry.firebaseKey}
+                value={ministry.firebaseKey}
+              >
+                {ministry.ministry_name}
+              </option>
+            ))
+          }
+          </Form.Select>
         </FloatingLabel>
         <Button type="submit" variant="outline-dark" className="m-2 text-color-drkblu">{obj.firebaseKey ? 'Update' : 'Submit Suggestion'}</Button>
       </Form>
