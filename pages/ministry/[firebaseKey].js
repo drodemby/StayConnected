@@ -15,6 +15,8 @@ export default function ViewMinistry() {
     viewMinistryDetails(firebaseKey).then(setMinistryDetails);
   }, [firebaseKey]);
 
+  console.warn(ministryDetails.ministryMembers[0].age);
+
   return (
     <div className="BD-container">
       <div className="BD-detail-cont-bg" style={{ backgroundImage: `url(${ministryDetails.image})` }}>

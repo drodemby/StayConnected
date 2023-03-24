@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deleteSuggestions } from '../api/suggestionData';
 import { useAuth } from '../utils/context/authContext';
+import { getSingleMinistry } from '../api/ministryData';
 
 function SugCard({ sugObj, onUpdate }) {
   const { user } = useAuth();
+  const [ministry, setMinistry] = useState({});
   const deleteSuggestion = () => {
     if (window.confirm(`Delete ${sugObj.first_name}?`)) {
       deleteSuggestions(sugObj.firebaseKey).then(() => onUpdate());
     }
   };
 
+  useEffect(() => {
+    getSingleMinistry(sugObj.ministry_id).then(setMinistry);
+  }, []);
+
   return (
     <div>
       <Card>
         <Card.Body>{sugObj.description}</Card.Body>
-        <Card.Body>{sugObj.ministry_id}</Card.Body>
+        <Card.Body>{ministry.ministry_name}</Card.Body>
         <Link href={`/suggestions/edit/${sugObj.firebaseKey}`} passHref>
           {sugObj.uid === user.uid ? (<Button variant="outline-dark" className="m-2">EDIT</Button>) : '' }
         </Link>
@@ -43,7 +49,7 @@ SugCard.propTypes = {
     ministry_id: PropTypes.string,
     uid: PropTypes.string,
   }).isRequired,
-  onUpdate: PropTypes.isRequired,
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default SugCard;

@@ -1,13 +1,9 @@
-import Head from 'next/head';
 import React from 'react';
 import GivingForm from '../../components/forms/GivingForm';
 
-export default function CreateMinistry() {
+export default function NewGift() {
   return (
     <>
-      <Head>
-        <title>Add New Board</title>
-      </Head>
       <GivingForm />
     </>
   );

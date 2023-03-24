@@ -27,7 +27,7 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link passHref href="/giving">
+              <Link passHref href="/give">
                 <a className="nav-link">
                   Giving
                 </a>
@@ -48,12 +48,15 @@ export default function NavBar() {
                 </a>
               </Link>
             </li>
-            <NavDropdown title="My Forms">
+            <NavDropdown title="Profile">
               {/* <NavDropdown.Item href="/givingStatement">
                 Giving Statement
               </NavDropdown.Item> */}
               <NavDropdown.Item href="/volunteerform">
                 Volunteer Forms
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/givingStatement">
+                Giving Statement
               </NavDropdown.Item>
             </NavDropdown>
             <button type="button" className="btn btn-danger" onClick={signOut}>
