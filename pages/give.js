@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 export default function give() {
   return (
     <div>
-      <p>Text</p>
+      <p>Click Here To Give</p>
       <Button href="/giving/newGift">give</Button>
     </div>
   );
