@@ -2,26 +2,31 @@
   "-NPKksx9TPfkzxnOZG40": {
     "ministry_name": "Kids Ministry",
     "description": "A place for the kids!",
-    "firebaseKey": "-NPKksx9TPfkzxnOZG40"
+    "firebaseKey": "-NPKksx9TPfkzxnOZG40",
+    "image":"https://media.istockphoto.com/id/944585218/photo/four-kids-hanging-out-together-in-the-garden.jpg?s=612x612&w=0&k=20&c=XnT6PGRD3SQ-aViAMW7HiJzkP6ShXjnNnOByJk6o2QA="
   },
   "-NPKksxBgagp755Yx5vU": {
     "ministry_name": "Men's Ministry",
     "description": "A safe place for women to learn, grow, and live",
-    "firebaseKey": "-NPKksxBgagp755Yx5vU"
+    "firebaseKey": "-NPKksxBgagp755Yx5vU",
+    "image":"https://media.istockphoto.com/id/1048189202/photo/men-in-a-support-group.jpg?s=612x612&w=0&k=20&c=ffpFJrfYVlEfQSEEwsEMV7rvm8J1RhWlBBRtYqkX8p8="
   },
   "-NPKksxDwRwulfZaX755": {
     "ministry_name": "Women's Ministry",
     "description": "A safe place for women to learn, grow, and live",
-    "firebaseKey":  "-NPKksxDwRwulfZaX755"
+    "firebaseKey":  "-NPKksxDwRwulfZaX755",
+    "image": "https://media.istockphoto.com/id/1352014158/photo/multiracial-women-having-fun-during-trekking-day-in-to-the-wood-escape-to-nature-and-travel.jpg?s=612x612&w=0&k=20&c=NcOzFuWa8w9NPSccyjRQ9BqOgi407kYVsebtnypGOgo="
   },
   "-NPKksxGse_CO4CsF3jp": {
     "ministry_name": "Music Minsitry",
     "description": "Do you play an instrument or sing? This might be the ministry for you",
-    "firebaseKey":"-NPKksxGse_CO4CsF3jp"
+    "firebaseKey":"-NPKksxGse_CO4CsF3jp",
+    "image":"https://ilovepraiseandworship.files.wordpress.com/2019/06/pexels-photo-2014775.jpeg?w=1568"
   },
   "-NPKksxHL75fhtybtfMm": {
     "ministry_name": "Usher Ministry",
     "description": "If you are a volunteer with a great personality and warming heart, Join US!",
-    "firebaseKey":"-NPKksxHL75fhtybtfMm"
+    "firebaseKey":"-NPKksxHL75fhtybtfMm",
+    "image":"https://images.squarespace-cdn.com/content/v1/5552b9a9e4b0b89be9afc14e/1467344831859-YM28MQK18A3QZC1BBBWT/DSC_0243.JPG?format=1500w"
   }
 }

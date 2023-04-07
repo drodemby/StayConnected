@@ -22,7 +22,7 @@ function SugCard({ sugObj, onUpdate }) {
 
   return (
     <div>
-      <Card>
+      <Card style={{ width: '18rem', margin: '10px' }}>
         <Card.Body>{sugObj.description}</Card.Body>
         <Card.Body>{ministry.ministry_name}</Card.Body>
         <Link href={`/suggestions/edit/${sugObj.firebaseKey}`} passHref>
