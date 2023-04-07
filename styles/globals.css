@@ -18,5 +18,25 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color:#90C2E7;
+}
+
+.button {
+  background-color: #94A0B3;
+  border-color: #94A0B3;
+}
+
+.button:hover {
+  background-color: #708099;
+  border-color: #708099;
+}
+
+.button:active {
+  background-color: black;
+  border-color: black;
+}
+
+.nav {
+  height: 65px;
+  background: white;
 }

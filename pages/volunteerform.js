@@ -17,7 +17,7 @@ export default function Volunteerform() {
   }, []);
 
   return (
-    <div>
+    <div className="d-flex flex-wrap">
       {forms.map((form) => (
         <VolunteerCard key={form.firebaseKey} volunteerObj={form} onUpdate={ShowUserForms} />
       ))}
