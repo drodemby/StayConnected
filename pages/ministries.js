@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/link-passhref */
 /* eslint-disable @next/next/no-img-element */
 import Carousel from 'react-bootstrap/Carousel';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { getMinistries } from '../api/ministryData';
 
 // import MinistryCard from '../components/MinistryCard';
@@ -30,14 +32,19 @@ export default function Ministry() {
               <h2 className="text-center">
                 {mini.ministry_name}
               </h2>
-              <img
-                className="d-block w-100 text-center"
-                src={mini.image}
-                alt={mini.ministry_name}
-              />
+              <Link href={`/ministry/${mini.firebaseKey}`}>
+
+                <img
+                  className="d-block w-100 text-center"
+                  src={mini.image}
+                  alt={mini.ministry_name}
+                />
+              </Link>
               <h3 className="text-center">
                 {mini.description}
               </h3>
+              <br />
+              <br />
             </Carousel.Item>
           ))}
         </Carousel>

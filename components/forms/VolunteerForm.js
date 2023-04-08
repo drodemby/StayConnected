@@ -146,7 +146,7 @@ function VolunteerForm({ obj }) {
         </FloatingLabel>
 
         {/* SUBMIT BUTTON  */}
-        <Button type="submit">{obj.firebaseKey ? 'Update' : 'Submit'} Form</Button>
+        <Button type="submit" variant="outline-dark" className="m-2 text-color-drkblu">{obj.firebaseKey ? 'Update' : 'Submit'} Form</Button>
       </Form>
     </div>
   );

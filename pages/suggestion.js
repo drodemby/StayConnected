@@ -30,7 +30,16 @@ export default function SuggestionPage() {
         Whether it is a new program, event, or service, we want to hear your ideas on how we can make our church even better. So please do not hesitate to share your thoughts with us. Together, we can continue to strengthen our church and make it a place where everyone feels loved and valued.
       </p>
       <Link href="/suggestions/new" passHref>
-        <Button className="button">New Suggestion </Button>
+        <Button
+          className="button"
+          style={{
+            // height: '0px',
+            padding: '0 auto',
+            maxWidth: '300px',
+            margin: '0 auto',
+          }}
+        >New Suggestion
+        </Button>
       </Link>
       <br />
       <div className="d-flex flex-wrap">
