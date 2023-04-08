@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { viewMemberDetails } from '../../api/mergedData';
@@ -26,6 +27,9 @@ export default function ViewVolunteerDetails() {
         </div>
         <div>
           {volDetails.ministryObj?.ministry_name}
+        </div>
+        <div>
+          <img src={volDetails.ministryObj?.image} alt="ministry_image" />
         </div>
       </div>
     </div>

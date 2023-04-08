@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import GivingForm from '../components/forms/GivingForm';
 
-export default function give() {
+export default function Give() {
+  const [open, setOpen] = useState(false);
+  const [buttonName, setButtonName] = useState('Give');
+  const handleFormToggle = () => {
+    if (buttonName === 'Give') {
+      setOpen(true);
+      setButtonName('Close Form');
+    } else {
+      setOpen(false);
+      setButtonName('Give');
+    }
+  };
+
   return (
     <div
       className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
     >
       <div>   <h1>Give</h1>
         <p>Welcome to our church community! We are grateful for your interest in supporting our mission and vision to serve and uplift our community. Your giving plays a vital role in allowing us to continue our work and reach more people with our message of hope and love.
@@ -19,7 +26,18 @@ export default function give() {
 
         </p>
       </div>
-      <Button className="button" href="/giving/newGift">Give</Button>
+      <Button
+        className="button"
+        onClick={handleFormToggle}
+        style={{
+          // height: '0px',
+          padding: '0 auto',
+          maxWidth: '300px',
+          margin: '0 auto',
+        }}
+      >{buttonName}
+      </Button>
+      {open ? <GivingForm /> : ''}
     </div>
   );
 }

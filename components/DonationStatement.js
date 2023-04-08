@@ -7,7 +7,13 @@ export default function DonationStatement({ donationObj }) {
 
   return (
     <div>
-      <Card>
+      <Card style={{
+        width: '18rem',
+        padding: '0 auto',
+        maxWidth: '300px',
+        margin: '0 auto',
+      }}
+      >
         <Card.Title> Your Giving Statement</Card.Title>
         <Card.Body>
           <h3>Tithes: {donationObj.tithe}</h3>

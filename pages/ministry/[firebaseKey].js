@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from 'react-bootstrap';
@@ -17,8 +18,9 @@ export default function ViewMinistry() {
 
   return (
     <div className="BD-container">
-      <div className="BD-detail-cont-bg" style={{ backgroundImage: `url(${ministryDetails.image})` }}>
+      <div className="BD-detail-cont-bg">
         <div className="BD-detail-cont">
+          <img src={ministryDetails.image} alt="ministry_image" />
           {/* <div className="BD-photo-cont"><img className="BD-photo" src={boardDetails.image} alt={boardDetails.name} /></div> */}
           <div className="BD-name-cont"><h2 className="BD-name">{ministryDetails.ministry_name}</h2></div>
           <div className="BD-desc-cont"><h5 className="BD-description">{ministryDetails.description}</h5></div>
