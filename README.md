@@ -1,11 +1,14 @@
 # Welcome to StayConnected
-#Overview
+# Overview
 StayConnected is a centralized platform for small ministries to be able to engage with current and potential members. 
 Members are able to give a tithe and or offering, make suggestions about current ministries within the church, and volunteer to be apart of a ministry of their choosing.
 
 Link to wireframes/prototype: https://dbdiagram.io/d/63eada8d296d97641d80a8d7
+
 Link/screenshot of data flowchart
 Link to app: https://stay-connected-cotwgi.netlify.app/
+
+
 Link to your project board (yes...even though it is a part of the repo)
 Description of the user and the problem you are solving for them
 Example 1: As a developer, it is important to understand the concepts of Array Methods. In this repo, I have code samples that show how I have worked through learning Array Methods
