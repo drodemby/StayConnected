@@ -3,6 +3,7 @@
 StayConnected is a centralized platform for small ministries to be able to engage with current and potential members. 
 Members are able to give a tithe and or offering, make suggestions about current ministries within the church, and volunteer to be apart of a ministry of their choosing.
 
+# Link
 Link to wireframes/prototype: https://dbdiagram.io/d/63eada8d296d97641d80a8d7
 
 Link/screenshot of data flowchart
